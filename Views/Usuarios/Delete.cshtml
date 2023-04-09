@@ -4,11 +4,11 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Excluir</h1>
+<h1 class="display-5">Excluir usuário</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3 class="display-6">Tem certeza de que deseja excluir o usuário?</h3>
 <div>
-    <h4>Usuario</h4>
+    
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -46,6 +46,6 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="idUsuario" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Voltar a Lista</a>
+        <a class="btn btn-warning" asp-action="Index">Voltar a Lista</a>
     </form>
 </div>

@@ -3,12 +3,14 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
+<div class="text-center">
+<br />
+<h1>Novo usuário</h1>
+<br />
 <p>
-    <a asp-action="Create">Criar Novo Usuário</a>
+    <a class="btn btn-primary" role="button" asp-action="Create">Criar Novo Usuário</a>
 </p>
+<br />
 <table class="table">
     <thead>
         <tr>
@@ -49,11 +51,12 @@
                 @Html.DisplayFor(modelItem => item.dataCriacao)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.idUsuario">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.idUsuario">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.idUsuario">Excluir</a>
+                <a class="btn btn-secondary" role="button" asp-action="Edit" asp-route-id="@item.idUsuario">Editar</a> |
+                <a class="btn btn-warning" role="button" asp-action="Details" asp-route-id="@item.idUsuario">Detalhes</a> |
+                <a class="btn btn-danger" role="button" asp-action="Delete" asp-route-id="@item.idUsuario">Excluir</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+</div>
