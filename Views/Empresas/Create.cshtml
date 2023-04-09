@@ -1,0 +1,43 @@
+﻿@model CRUDLogin.Models.Empresa
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Criar</h1>
+
+<h4>Empresa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="nomeEmpresa" class="control-label"></label>
+                <input asp-for="nomeEmpresa" class="form-control" />
+                <span asp-validation-for="nomeEmpresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="documentoEmpresa" class="control-label"></label>
+                <input asp-for="documentoEmpresa" class="form-control" />
+                <span asp-validation-for="documentoEmpresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dataCriacao" class="control-label"></label>
+                <input asp-for="dataCriacao" class="form-control" />
+                <span asp-validation-for="dataCriacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar a Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
