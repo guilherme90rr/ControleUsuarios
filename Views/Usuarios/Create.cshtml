@@ -38,16 +38,15 @@
             </div>
             <br />
             <div class="form-group">
-                <input type="submit" value="Criar" class="btn btn-primary" />
+                <input type="submit" value="Criar" class="btn btn-primary" /> |
+                <a class="btn btn-warning" asp-action="Index">Voltar a Lista</a>
             </div>
             <br />
         </form>
     </div>
 </div>
 
-<div>
-    <a class="btn btn-warning" asp-action="Index">Voltar a Lista</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

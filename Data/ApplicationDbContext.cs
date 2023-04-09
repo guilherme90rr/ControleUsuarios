@@ -12,7 +12,6 @@ namespace CRUDLogin.Data
         {
 
         }
-
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Empresa> Empresa { get; set; }
 
